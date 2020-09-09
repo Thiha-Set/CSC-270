@@ -21,30 +21,29 @@ int main(){
     float r;
 
     //ask user input for radius
-    printf("Please enter a number of type float for the radius: \n");
+    printf("Enter radius: ");
     scanf("%f",&r);
 
-    //DEBUG:
-    printf("You entered %f\n",r);
 
     //check if radius <=0
     if(r<=0)
     {
         //if radius <= 0, throw an error message and return 1
-        printf("ERROR: You entered a radius less than or equal to 0. Try again.");
+        printf("Invalid radius. Must be greater than zero.");
         return 1;    
     }
 
     //set up following pieces of information:
-    printf("A circle with a radius of: %f\n",r);
-    //DEBUG: print the diameter
-    printf("The diameter of the circle is %f\n", diameter(r));
+    printf("A circle with radius %0.3f:\n",r);
 
-    //DEBUG: print the area
-    printf("The area of the circle is %f\n",area(r));
+    //print the diameter to three decimal places
+    printf("\tDiameter: %0.3f\n", diameter(r));
 
-    //DEBUG: print the circumference
-    printf("The circumference of the circle is %f\n",circumference(r));
+    //print the area to three decimal places
+    printf("\tArea: %0.3f\n",area(r));
+
+    //print the circumference to three decimal places
+    printf("\tCircumference: %0.3f\n",circumference(r));
 
     //return 0 for success
     return 0;
