@@ -3,7 +3,7 @@ int main(){
     //ask user input
     float deg;
     char id;
-    printf("Enter temperature: ");
+    printf("Enter input temperature: ");
     scanf("%f%c",&deg,&id);
 
     //check what the user-inputted temperature unit is (whether it was fahrenheit, celsius, or kelvin, and proceed accordingly)
