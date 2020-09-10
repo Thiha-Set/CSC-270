@@ -21,7 +21,7 @@ unsigned int time_to_sec(unsigned int hours, unsigned int minutes,
     // complete this
     //algorithm: convert hours first to minutes by multiplying by 60 then add the converted_minutes to the param. minutes and multiply by 60 to get the seconds
     //and then add to the param. seconds.
-    return (hours*60+minutes)*60;
+    return (hours*60+minutes)*60+seconds;
 }
 
 /* Print a formatted representation of the calculation
