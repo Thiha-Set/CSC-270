@@ -15,7 +15,7 @@ int main(){
     case 'C':
     case 'c':
         //acknowledge the input:
-        printf("%0.2f C converts to:\n",deg);
+        printf("%0.2f Celsius converts to:\n",deg);
 
         //first convert to Fahrenheit (Formula: 1.8C + 32) and then print:
         f=1.8*deg+32;
@@ -32,7 +32,7 @@ int main(){
     case 'K':
     case 'k':
         //acknowledge the input:
-        printf("%0.2f K converts to:\n",deg);
+        printf("%0.2f Kelvin converts to:\n",deg);
 
         //first convert to Celcius (Formula: K-273.15) and then print:
         c=deg-273.15;
@@ -46,19 +46,19 @@ int main(){
     case 'F':
     case 'f':
         //acknowledge the input:
-        printf("%0.2f F converts to:\n",deg);
+        printf("%0.2f Fahrenheit converts to:\n",deg);
 
-        //first convert to Kelvin (Formula: ((F-32)/1.8)+273.15 and print:
-        k=((deg-32)/1.8)+273.15;
-        printf("\t%0.2f K\n",k);
-
-        //then convert to Celcius (Formula: (F-32)/1.8) and print:
+        //convert to Celcius (Formula: (F-32)/1.8) and print:
         c=(deg-32)/1.8;
         printf("\t%0.2f C\n",c);
+
+        //convert to Kelvin (Formula: ((F-32)/1.8)+273.15 and print:
+        k=((deg-32)/1.8)+273.15;
+        printf("\t%0.2f K\n",k);
         break;
     //if input is invalid return -1
     default:
-        printf("Invalid temperature scale");
+        printf("Invalid temperature scale ");
         return -1;
         break;
     }
