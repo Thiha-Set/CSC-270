@@ -31,8 +31,7 @@ void declareVars(){
         fscanf(cfg,"#define XSIZE %d\n"
             "#define YSIZE %d\n"
             "#define DEFAULTROUNDS %d\n"
-            "#define ALIVE %d\n"
-            "#define DEAD %d\n",&XSIZE,&YSIZE,&DEFAULTROUNDS,ALIVE,DEAD);
+            ,&XSIZE,&YSIZE,&DEFAULTROUNDS);
     }
 }
 // initialize the board to all dead cells
