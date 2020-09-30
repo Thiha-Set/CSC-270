@@ -6,13 +6,14 @@
  */
 #include <stdio.h>
 #include <unistd.h>
+#define ALIVE	1
+#define	DEAD	0
 
 //declare specs for the game in a global scope
 int XSIZE;
 int YSIZE;
 int DEFAULTROUNDS;
-int ALIVE;
-int DEAD;
+
 
 //helper method to help assign the variables with the values from the config file
 void declareVars(){
@@ -31,7 +32,7 @@ void declareVars(){
             "#define YSIZE %d\n"
             "#define DEFAULTROUNDS %d\n"
             "#define ALIVE %d\n"
-            "#define DEAD %d\n",&XSIZE,&YSIZE,&DEFAULTROUNDS,&ALIVE,&DEAD);
+            "#define DEAD %d\n",&XSIZE,&YSIZE,&DEFAULTROUNDS,ALIVE,DEAD);
     }
 }
 // initialize the board to all dead cells
