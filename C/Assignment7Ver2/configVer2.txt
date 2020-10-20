@@ -1,0 +1,4 @@
+
+Rows: 10
+Columns: 10
+Rounds: 15

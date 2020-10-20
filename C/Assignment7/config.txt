@@ -1,7 +1,7 @@
 
 #define XSIZE	15
 #define YSIZE 	15
-#define DEFAULTROUNDS 15
+#define DEFAULTROUNDS 5
 
 
 // initialize the board to all dead cells

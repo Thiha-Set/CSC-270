@@ -9,30 +9,31 @@
 #define ALIVE	1
 #define	DEAD	0
 
-//declare specs for the game in a global scope
-int XSIZE;
-int YSIZE;
-int DEFAULTROUNDS;
+//declare static vars to allow access from other parts of the code
+static int XSIZE;
+static int YSIZE;
+static int DEFAULTROUNDS;
 
 
 //helper method to help assign the variables with the values from the config file
 void declareVars(){
+    
     //open the configuration file
-    FILE *cfg = fopen("config.txt","r");
+    FILE *cfg = fopen("configVer2.txt","r");
 
     //pointer to a string containing the values extracted from the file
     char length[60];
 
-    //while the EOF has not been reached yet by fgets...
+    //while the EOF has not been reached yet by fgets.   ..
     while (fgets(length,60,cfg)!= NULL)
     {
         //scan to find the exercept where the values are defined, and set each spec's pointer
         //point to their respective attributes.
-        fscanf(cfg,"#define XSIZE %d\n"
-            "#define YSIZE %d\n"
-            "#define DEFAULTROUNDS %d\n"
-            ,&XSIZE,&YSIZE,&DEFAULTROUNDS);
+        fscanf(cfg,"Rows: %d"
+        "\nColumns: %d"
+        "\nRounds: %d",&XSIZE,&YSIZE,&DEFAULTROUNDS);
     }
+    
 }
 // initialize the board to all dead cells
 void initBoard(int vBoard[][YSIZE]);
@@ -51,6 +52,7 @@ int onBoard(int x, int y);
 int main(int argc, char *argv[]) {
     //call the declareVars() method to initialize the specs...
     declareVars();
+    
 	int board[XSIZE][YSIZE];
 	int rounds = DEFAULTROUNDS;
 
