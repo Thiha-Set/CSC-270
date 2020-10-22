@@ -5,6 +5,7 @@
 void handle_record(int numRecords, int currentNumber){
     //have a temp variable output to hold the records
     std::string output = "";
+
     int idNum = 1;
     //As long as there are records to read
     while(currentNumber < numRecords){
@@ -55,7 +56,7 @@ void handle_record(int numRecords, int currentNumber){
         currentNumber++;
     }
     //print out output
-    std::cout << output << ".";
+    std::cout << output;
 }
 //role_function() --> check the role of the person, and call the appropriate getData() method
 //Pre-condition: line is a string in the specified format, roleDeterminant is the first char of line (and is either 'p' or 's')
@@ -70,10 +71,9 @@ std::string role_function(char roleDeterminant,std::string line){
 int main(){
     //prompt the user for number of records and preserve the input
     //in a variable
-    std::cout <<"Enter number of records to read: ";
     int numRecords;
     std::cin >> numRecords;
-
+    
     //delegate record scanning and formatting to a helper method
     handle_record(numRecords,0);
 }
