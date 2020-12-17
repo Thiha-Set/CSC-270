@@ -1,0 +1,6 @@
+(define (square x) (* x x))
+(display (square 2))
+(newline)
+(display ( + (square 2) (square 2)))
+(newline)
+(exit)
